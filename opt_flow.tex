@@ -1,11 +1,19 @@
-\documentclass{article}
+\title{CS699 Literature Review}
+\author{Ted Satcher}
+\documentclass[letterpaper]{article}
+\usepackage{cite}
+\date{\today}
+
 \begin{document}
-Horn and Schunk proposed early techniques for the determination of optical flow in image sequences.  The problem domain they tackled in this work was simplified by assuming uniform illumination, smooth reflectance variation (for differentiability) and the notion that brigthness motion corresponds to object motion.  They point out that one component of optical flow velocity lies in direction of the brigthness gradient vector, however the other component (perpendicular to the gradient) cannot be determined without another constraint.  The additional constraint introduced by the authors was that of smoothness of flow and they developed an iterative computational method.
+\maketitle
 
+\section{Horn and Schunk Optical Flow}
+Horn and Schunk\cite{Horn-flow} proposed early techniques for the determination of optical flow in image sequences. Several simplifying assumptions were made in order to restrict the problem domain.  These include an assumption of uniform illumination, smooth reflectance variation (for differentiability) and the notion that brightness motion corresponds to object motion.  They point out that one component of optical flow velocity lies in the direction of the brightness gradient vector, however the other component (perpendicular to the gradient) cannot be determined without another constraint.  The additional constraint introduced by the authors is that of the smoothness of flow in a small neighborhood of pixels. In regions of low brightness gradient, the optical flow reduces to the mean velocity of the region as a consequence of this constraint.  The authors present an iterative method to calculate the flow and experiment with synthetic image sequences to validate their method.
 
-- low brightness gradient, optical flow at a point reduces to neighborhood mean velocity
-- experimental work was with generated sequences to investigate convergence of the methd
+\section{Daugman Gabor Transforms}
+John Daugman is noted for extending into two dimensions the Gabor filter family introduced by Dennis Gabor in 1946.  He took inspiration from mammalian visual systems when deriving the two dimensional expression and he points out in this work how Gabors can approximate the responses of low level components of these biological systems.  The early portion of the paper deals with the general structure of images and various representations of them from a mathematical perspective.  Next, the author introduces Gabor filters and how they are parameterized.  Of note, the basis functions of Gabors are not orthogonal and finding the coefficients for the functions requires either algebraically solving a large linear system or using some iterative method.  Daugman uses a neural network to search the coefficient space and demonstrates how the network/filter system can be used in image compression and segmentation\cite{daugman}.
 
-
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,proposal}
 
 \end{document}
