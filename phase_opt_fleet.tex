@@ -1,0 +1,27 @@
+\title{CS699 Literature Review}
+\author{Ted Satcher}
+\documentclass[letterpaper]{article}
+\usepackage{cite}
+\date{\today}
+\begin{document}
+\maketitle
+\section{Fleet and Jepson Component Velocity from Phase}
+The paper by Fleet and Jepson~\cite{phase-opt-flow} deals with the
+computation of component velocity in image sequences.  The authors
+identify issues that should be addressed when designing a method for
+measuring velocity.  These include accuracy, robustness, space-time
+localization and the determination of multiple velocities in a
+neighborhood.  Fleet and Jepson go on to explain how typical methods
+using amplitude fail in one or more of these areas.  Section two
+describes the filters used to analyze the sequence.  The filters are a
+family of three dimensional Gabors whose attractiveness lies in their
+minimization of uncertainty between the spatiotemporal domain and the
+frequency domain.  Section three explores a one dimensional velocity
+example to demonstrate the superiority that a phase representation has
+over an amplitude representation.  Subsequent sections detail more
+complex experiments using synthetic and natural image sequences.
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,proposal}
+
+\end{document}
