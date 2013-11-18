@@ -1,0 +1,38 @@
+\title{CS699 Literature Review}
+\author{Ted Satcher}
+\documentclass[letterpaper]{article}
+\usepackage{cite}
+\usepackage{setspace}
+\date{\today}
+\doublespacing
+
+\begin{document}
+\maketitle
+
+\section{Shiftable Multiscale Transforms}
+The multiscale framework described by Simoncelli, et al
+in\cite{shift-multi} is meant to address an undesirable behavior in
+wavelet and other critically sampled multiscale transformations.  A
+critically sampled transformation is one in which the number of
+coefficients in the transformation is equal to the number of samples
+in the signal.  The behavior in question relates to coefficient power
+in the subbands of a wavelet transform and exhibits itself when the
+transformed signal is spatially shifted.  A simple spatial shift will
+cause the coefficient power to radically jump around in the subbands.
+The goal of the method in this paper is to formulate a small set of
+basis functions from a signal that permit the interpolation of the
+multiscale transform given any signal shift in spatial location,
+orientation or scale.  The approach used by the authors is to
+mathematically define shiftability and then set about to compute the
+requirements and properties of a shiftable transformation.  In the
+experimental section, the authors apply the technique to a synthetic
+stereo matching problem and compare the qualitative performance of
+their technique versus a wavelet approach.
+
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,proposal}
+
+\end{document}

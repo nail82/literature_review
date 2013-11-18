@@ -1,0 +1,36 @@
+\title{CS699 Literature Review}
+\author{Ted Satcher}
+\documentclass[letterpaper]{article}
+\usepackage{cite}
+\usepackage{setspace}
+\date{\today}
+\doublespacing
+
+\begin{document}
+\maketitle
+
+\section{Steerable Filters}
+Freeman and Adelson in~\cite{steer-filters} describe techniques for
+steering functions and they begin with a definition of steerability.
+From their definition, a steerable function is one that can be
+represented as a linear combination of rotated versions of itself.
+This is a useful property in digital filters since it allows one to
+compute filter outputs for arbitrary rotations given a set of
+so-called basis functions.  The authors go on to present
+theorems that identify steerable functions and provide bounds on the
+number of basis functions required to enable steerability.
+
+
+
+
+
+Enumerated in the paper are application areas
+Important to design separable filters
+Important to have as few basis functions as possible to minimize computation.
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,proposal}
+
+\end{document}
