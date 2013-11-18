@@ -1,10 +1,31 @@
-\documentclass{article}
+\title{CS699 Literature Review}
+\author{Ted Satcher}
+\documentclass[letterpaper]{article}
+\usepackage{cite}
+\usepackage{setspace}
+\date{\today}
+\doublespacing
+
 \begin{document}
+\maketitle
 
-This paper identifies a limitation of the human visual system with regard to low sensitivity in the temporal domain.  Small motions and brightness changes go undetected.  The main idea of the paper is to explore a method for amplifying these small changes in an image sequence in order to visualize them.  The approach taken is to leverage multi-resolution analysis using a Laplacian pyramid for each image frame of the sequence and to bandpass filter groups of pixels to identify and amplify the small changes.
+\section{Eulerian Video Magnification}
+The paper by Wu et. al~\cite{eulerian} describes a technique for the
+amplification of small motions in a video sequence.  The process
+developed by the authors involves creating a multiscale representation
+of each frame in the sequence and then bandpass filtering the temporal
+intensity variations of groups of pixels in the representation. The
+filtered representation is linearly amplified and the video is
+reconstructed enabling the visualization of hidden motion and color
+changes in the video.  This approach differs from earlier techniques,
+for instance Liu~\cite{Liu-lagrange}, in that no attempt is made to
+extract the motion field.  The benefits to this approach are
+simplified computation and reassembly of the magnified sequence.  The
+primary drawback is the introduction of artifacts to the reconstructed
+sequence when too large a magnification factor is applied.
 
-- linear approach
-- limitations to magnification
-- noisy
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,proposal}
 
 \end{document}

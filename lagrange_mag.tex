@@ -1,7 +1,32 @@
-\documentclass{article}
+\title{CS699 Literature Review}
+\author{Ted Satcher}
+\documentclass[letterpaper]{article}
+\usepackage{cite}
+\usepackage{setspace}
+\date{\today}
+\doublespacing
 \begin{document}
-- Early work in motion mag
-- involved optical flow and feature tracking
-- magnification revealed occluded background that had to be manually adjusted to maintain image coherence.
+\maketitle
+
+\section{Liu Motion Magnification}
+Liu, in ~\cite{Liu-lagrange}, describes a motion magnification process
+based on optical flow computations.  This is a complex method that
+makes multiple passes over the input sequence with user interaction
+required at several points.  The primary goal of the process is to
+group pixels into motion clusters which are used to segment the
+frames.  User interaction is required to help guide the segmentation
+and to identify clusters whose motion should be magnified.  The
+clustering process has two iterations of feature identification and
+flow vector computations, one for frame registration (to remove camera
+motion) and one to identify the motion clusters.  Collecting pixels
+into coherent motion clusters is a primary computational task and
+machine learning is used to improve performance at occlusion
+boundaries.  The actual magnification is a simple scaling factor
+chosen by the user.  A significant drawback of this approach is
+processing time.  The paper reports a run time of ten hours.
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,proposal}
+
 
 \end{document}
