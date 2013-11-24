@@ -10,7 +10,31 @@
 \maketitle
 
 \section{Lucas-Kanade 20 Years On: A Unifying Framework}
+This paper by Baker and Matthews~\cite{lk-20-yrs} is the first in a
+four part series examining image alignment algorithms based on the
+Lucas-Kanade method from~\cite{lk-81}.  The algorithms in this class
+are iterative in nature and rely on gradient descent methods to
+minimize the difference between a template image and a warped input
+image.  The goal of this paper is to formulate a categorization
+framework and to anayze example algorithms from different regions of
+the framework in terms of convergence rate, convergence iterations,
+computational complexity and noise robustness.  The authors also
+present their modification to Lucas-Kanade, demonstrate its
+equivalence to Lucas-Kanade and prove the computational advantage of
+their method.  Finally they examine several examples of gradient
+descent methods in the context of their image alignment technique.
 
+
+
+
+%   One axis of
+% their framework defines the direction attribute of an algorithm.  A
+% forward algorithm warps the input image back to the coordinate frame
+% of the template and conversely, an inverse algorithm warps the
+% template back to the input image. A second axis identifies
+% algorithms as having either additive or compositional updates.
+% Additive updates iteratively modify the parameters of a warp and
+% compositional updates
 
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,proposal}
