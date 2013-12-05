@@ -10,17 +10,29 @@
 \maketitle
 
 \section{Phase Based Motion Magnification}
+Wadhwa et al in~\cite{phase-based} introduce a new method for
+amplifying small motions in video sequences.  The defining
+characteristic of this technique is the use of temporal variations of
+phase information for the detection of motion.  The authors make use
+of steerable pyramids described by Simoncelli and Freeman
+here~\cite{steer-pyr} and complex-valued Gabor filters for measuring
+phase information.  The use of phase information provides several
+benefits including reduced noise in the amplified sequence and the
+potential for increased magnification factors.  The primary drawback
+of the technique is performance.  Each filter orientation used in the
+pyramid representation has both real and imaginary components, creating
+a representation of the sequence with a number of intermediate images
+per frame of the sequence.  The paper concludes with an extensive
+experimental section exploring the qualitative performance and
+limitations of the method.
 
-Based on earlier work performed in the Eulerian paper, the authors of
-this paper introduce a new method to amplify small motions which has
-improved noise characteristics and increased amplification potential.
-This work makes several modifications that qualitatively improve their
-magnification results.
 
-Replaced Laplacians with steerable pyramids using Gabor filters -
-Gabors have a complex response and phase images are used to filter the
-motion.  - Good experimental section. ground truthed magnification
-with controlled experiments.
+
+
+
+
+
+
 
 
 \bibliographystyle{IEEEtran}
